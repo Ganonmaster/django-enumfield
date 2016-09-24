@@ -5,11 +5,7 @@ from django.utils import six
 
 from django_enumfield import validators
 
-
-if django.VERSION < (1, 8):
-    base_class = six.with_metaclass(models.SubfieldBase, models.IntegerField)
-else:
-    base_class = models.IntegerField
+base_class = models.IntegerField
 
 
 class EnumField(base_class):
